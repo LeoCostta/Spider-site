@@ -1,5 +1,5 @@
-@import url('/assets/css/reset.css');
-@import url('/assets/css/global.css');
+@import url('reset.css');
+@import url('global.css');
 
 body {
   background-color: var(--primary-color);
@@ -7,7 +7,7 @@ body {
 
 body::before {
   content: "";
-  background-image: url('/assets/images/spider-man-background.jpg');
+  background-image: url('../images/spider-man-background.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,26 +18,26 @@ body::before {
   transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 
-.menu {
+.s-menu {
   padding: 1rem 0;
   width: 100%;
   text-align: center;
   position: relative;
 }
 
-.menu__item {
+.s-menu__item {
   display: inline-block;
   text-transform: uppercase;
   margin: 0 1.25rem;
 }
 
-.menu__icon {
+.s-menu__icon {
   width: 2.5rem;
   margin: 0 1.25rem;
   vertical-align: middle;
 }
 
-.container {
+.s-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@ body::before {
   perspective: 3000px;
 }
 
-.card {
+.s-card {
   border: 0.5rem solid white;
   width: 100%;
   height: 70vh;
@@ -53,19 +53,19 @@ body::before {
   transition: filter .5s ease-in-out;
 }
 
-.card:nth-child(1) {
+.s-card:nth-child(1) {
   transform: rotateY(0deg) translateZ(50vw);
 }
 
-.card:nth-child(2) {
+.s-card:nth-child(2) {
   transform: rotateY(120deg) translateZ(50vw);
 }
 
-.card:nth-child(3) {
+.s-card:nth-child(3) {
   transform: rotateY(240deg) translateZ(50vw);
 }
 
-.card__background {
+.s-card__background {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -74,7 +74,7 @@ body::before {
   transition: opacity 1s ease-in-out;
 }
 
-.card__image {
+.s-card__image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -82,7 +82,7 @@ body::before {
   transition: 1s ease-in-out;
 }
 
-.card__title {
+.s-card__title {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
@@ -92,7 +92,7 @@ body::before {
   transition: bottom 1s ease-in-out;
 }
 
-.controller {
+.s-controller {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -102,7 +102,7 @@ body::before {
   width: 100%;
 }
 
-.controller__button {
+.s-controller__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,22 +119,22 @@ body::before {
   transition: transform 0.3s ease-in-out;
 }
 
-.controller__button:hover {
+.s-controller__button:hover {
   transform: scale(1.1);
 }
 
-.controller__button:nth-child(2) {
+.s-controller__button:nth-child(2) {
   margin: 0 3.75rem;
 }
 
-.controller__button--active {
+.s-controller__button--active {
   background-color: white;
   color: var(--primary-color);
   border: 0.1875rem solid var(--primary-color);
   outline: 0.125rem solid white;
 }
 
-.controller__line {
+.s-controller__line {
   background-color: white;
   width: 50%;
   height: 2px;
@@ -143,41 +143,41 @@ body::before {
 
 /* Hover Animation */
 
-.card--hovered .card__background {
+.s-card--hovered .s-card__background {
   cursor: pointer;
   opacity: 0;
 }
 
-.card--hovered .card__image {
+.s-card--hovered .s-card__image {
   transform: scale(1.4);
   filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
 }
 
 body#spider-man-01-hovered::before {
-  background-image: url('/assets/images/pic-sm-bg-01.jpg');
+  background-image: url('../images/pic-sm-bg-01.jpg');
 }
 
 body#spider-man-02-hovered::before {
-  background-image: url('/assets/images/pic-sm-bg-02.jpg');
+  background-image: url('../images/pic-sm-bg-02.jpg');
 }
 
 body#spider-man-03-hovered::before {
-  background-image: url('/assets/images/pic-sm-bg-03.jpg');
+  background-image: url('../images/pic-sm-bg-03.jpg');
 }
 
 body[id^="spider-man-"]::before {
   opacity: 1;
 }
 
-body[id^="spider-man-"] .card:not(.card--hovered) {
+body[id^="spider-man-"] .s-card:not(.s-card--hovered) {
   filter: grayscale(100%);
 }
 
-.card--hovered .card__title {
+.s-card--hovered .s-card__title {
   bottom: 50%;
 }
 
-.cardcarousel {
+.s-cards-carousel {
   display: flex;
   justify-content: center;
   width: calc(100vw / 3 - 10%);
